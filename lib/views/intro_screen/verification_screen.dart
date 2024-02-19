@@ -14,62 +14,64 @@ class verificationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-        title: letsConnect.text.black.fontFamily(bold).make(),
-        centerTitle: true,
-      ),
-      body: Container(
-        padding: EdgeInsets.all(12),
-        child: Column(
-          children: [
-            TextFormField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
-                    color: Vx.gray400,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0.0,
+          backgroundColor: Colors.transparent,
+          title: letsConnect.text.black.fontFamily(bold).make(),
+          centerTitle: true,
+        ),
+        body: Container(
+          padding: EdgeInsets.all(12),
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(
+                      color: Vx.gray400,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(
+                      color: Vx.gray400,
+                    ),
+                  ),
+                  labelText: "Phone Number",
+                  prefixIcon: Icon(
+                    Icons.phone_android_rounded,
+                    color: Vx.gray600,
+                  ),
+                  prefixText: "+91",
+                  labelStyle: TextStyle(
+                    color: Vx.gray600,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
-                    color: Vx.gray400,
+              ),
+              10.heightBox,
+              otp.text.size(16).make(),
+              Spacer(),
+              SizedBox(
+                width: context.screenWidth - 80,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: StadiumBorder(),
+                    backgroundColor: bgColor,
+                    padding: EdgeInsets.all(16),
                   ),
-                ),
-                labelText: "Phone Number",
-                prefixIcon: Icon(
-                  Icons.phone_android_rounded,
-                  color: Vx.gray600,
-                ),
-                prefixText: "+91",
-                labelStyle: TextStyle(
-                  color: Vx.gray600,
-                  fontWeight: FontWeight.bold,
+                  onPressed: (() {
+                    Get.to(() => homeScreen());
+                  }),
+                  child: continueText.text.size(18).white.semiBold.make(),
                 ),
               ),
-            ),
-            10.heightBox,
-            otp.text.size(16).make(),
-            Spacer(),
-            SizedBox(
-              width: context.screenWidth - 80,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: StadiumBorder(),
-                  backgroundColor: bgColor,
-                  padding: EdgeInsets.all(16),
-                ),
-                onPressed: (() {
-                  Get.to(() => homeScreen());
-                }),
-                child: continueText.text.size(18).white.semiBold.make(),
-              ),
-            ),
-            30.heightBox,
-          ],
+              30.heightBox,
+            ],
+          ),
         ),
       ),
     );

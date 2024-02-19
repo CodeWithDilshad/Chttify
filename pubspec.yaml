@@ -36,10 +36,16 @@ dependencies:
   # http:
   velocity_x: ^4.1.2
   get: ^4.6.5
+  flutter_launcher_icons: ^0.13.1
   # geolocator: ^9.0.1
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/ic_logo.png" 
+
 dev_dependencies:
-  flutter_test:
+  flutter_test: 
     sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -83,7 +89,7 @@ flutter:
     - family: mont_bold
       fonts:
         - asset: assets/fonts/mont_bold.ttf
-    - family: mont_light 
+    - family: mont_light
       fonts:
         - asset: assets/fonts/mont_light.ttf
     - family: mont_semi
