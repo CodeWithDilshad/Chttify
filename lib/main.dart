@@ -5,7 +5,7 @@ import 'package:demo_application/views/intro_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
+ 
 main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
